@@ -34,3 +34,5 @@ Router.patch('/users/:id', checkAuthentication, userController.update);
 Router.delete('/users/logout', userController.logout);
 
 module.exports = Router;
+
+// Commit Purposes
