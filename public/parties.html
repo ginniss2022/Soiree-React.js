@@ -6,11 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Soiree</title>
     <script src="parties.html"></script>
+    <link rel="stylesheet" href="styles/parties.css">
 </head>
 <body>
-    <button type="Create posts" id='createposts'>Create Post</button>
-    <div>Post Here</div>
-    <button type="refresh posts"></button>
-    <button type="button">Click Me!</button>
-</body>
+    <form id="post-form">
+        <label for="user_id">User ID:</label>
+        <input type="text" id="user_id" name="user_id"><br>
+      
+        <label for="description">Description:</label>
+        <textarea id="description" name="description"></textarea><br>
+      
+        <label for="location">Location:</label>
+        <input type="text" id="location" name="location"><br>
+      
+        <label for="image_file">Image file:</label>
+        <input type="file" id="image_file" name="image_file"><br>
+      
+        <button type="submit">Create Post</button>
+      </form>
 </html>

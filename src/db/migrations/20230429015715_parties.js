@@ -4,6 +4,7 @@
  */
 exports.up = (knex) => knex.schema.createTable('parties', (table) => {
   table.increments("post_id");
+  table.string('party_name');
   table.integer('user_id').notNullable();
   table.string('image_file_location');
   table.string('post_description').notNullable();

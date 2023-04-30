@@ -1,4 +1,6 @@
 const express = require('express');
+// eslint-disable-next-line import/no-extraneous-dependencies
+// const upload = require('./middleware/multer');
 const userController = require('./controllers/user');
 const partyController = require('./controllers/parties/index');
 const addModels = require('./middleware/add-models');
@@ -18,7 +20,8 @@ Router.get('/cookieCounter', (req, res) => {
 // Create
 Router.post('/users', userController.create);
 Router.post('/users/login', userController.login);
-Router.post('/parties', partyController.create);
+
+// Router.post('upload', upload.single("image"));
 // Read
 Router.get('/users', userController.list);
 Router.get('/users/:id', userController.show);
@@ -35,8 +38,8 @@ Router.patch('/users/:id', checkAuthentication, userController.update);
 Router.delete('/users/logout', userController.logout);
 
 // Parties
-
 // Create
+Router.post('/parties', partyController.create);
 
 module.exports = Router;
 
