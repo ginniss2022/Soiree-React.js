@@ -75,6 +75,7 @@ class Party {
 
   // Delete
   static async destroy(post_id) {
+    console.log('made it there');
     try {
       const query = 'DELETE FROM parties WHERE post_id = ? RETURNING *;';
       const { rows } = await knex.raw(query, [post_id]);

@@ -1,7 +1,7 @@
 const Party = require('../models/parties');
 /**
  * @param { import("knex").Knex } knex
- * @returns { Promise<void> } 
+ * @returns { Promise<void> }
  */
 exports.seed = async (knex) => {
   // Deletes ALL existing entries
