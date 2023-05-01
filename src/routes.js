@@ -32,15 +32,24 @@ Router.get('/logged-in-secret', checkAuthentication, (req, res) => {
 });
 
 // Update
-Router.patch('/users/:id', checkAuthentication, userController.update);
+Router.patch('/users/id', checkAuthentication, userController.update);
 
 // Delete
 Router.delete('/users/logout', userController.logout);
 
 // Parties
-
 // Create
 Router.post('/parties', partyController.create);
+
+// Read
+Router.get('/parties', partyController.list);
+Router.get('/parties/id', partyController.findById);
+
+// Update
+Router.patch('/parties/id', partyController.update);
+
+// Delete
+Router.delete('/parties/id', partyController.destroy);
 
 module.exports = Router;
 

@@ -1,4 +1,5 @@
 const destroy = async (req, res) => {
+  console.log("made it here");
   const {
     db: { Party },
     body: { post_id },

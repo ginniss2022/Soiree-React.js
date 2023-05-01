@@ -9,7 +9,7 @@ exports.up = (knex) => knex.schema.createTable('parties', (table) => {
   table.string('image_file_location');
   table.string('post_description').notNullable();
   table.string('post_location');
-  table.timestamps();
+  table.timestamps(true, true);
 });
 /**
  * @param { import("knex").Knex } knex
