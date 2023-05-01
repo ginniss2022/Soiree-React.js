@@ -41,10 +41,12 @@ class Party {
   }
 
   static async findById(post_id) {
+    console.log("made it there");
     try {
       const query = `SELECT * FROM parties WHERE post_id = ?;`;
       const { rows: [party] } = await knex.raw(query, [post_id]);
-      return party ? new Party(party) : null;
+      console.log(party);
+      return party;
     } catch (err) {
       console.log(err);
     }
@@ -73,12 +75,22 @@ class Party {
 
   // Delete
   static async destroy(post_id) {
+    console.log('made it there');
     try {
       const query = 'DELETE FROM parties WHERE post_id = ? RETURNING *;';
       const { rows } = await knex.raw(query, [post_id]);
       return rows.map((party) => new Party(party));
     } catch (err) {
       console.log(err);
+    }
+  }
+
+  static async destroyall() {
+    try {
+      return knex.raw('TRUNCATE parties;');
+    } catch (err) {
+      console.log(err);
+      return null;
     }
   }
 }
