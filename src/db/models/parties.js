@@ -11,18 +11,8 @@ class Party {
     this.post_location = post_location;
   }
 
-  static async list() {
-    try {
-      const { rows } = await knex.raw(`SELECT * FROM parties;`);
-      return rows.map((party) => new Party(party));
-    } catch (err) {
-      console.log(err);
-      return null;
-    }
-  }
-
+  // Create
   static async create(party_name, user_id, image_file_location, post_description, post_location) {
-    console.log("made it to model");
     // eslint-disable-next-line no-param-reassign
     party_name = party_name.toLowerCase();
     try {
@@ -36,6 +26,59 @@ class Party {
     } catch (err) {
       console.log(err);
       return null;
+    }
+  }
+
+  // Read
+  static async findByName(party_name) {
+    try {
+      const query = `SELECT * FROM parties WHERE party_name = ?;`;
+      const { rows: [party] } = await knex.raw(query, [party_name]);
+      return party ? new Party(party) : null;
+    } catch (err) {
+      console.log(err);
+    }
+  }
+
+  static async findById(post_id) {
+    try {
+      const query = `SELECT * FROM parties WHERE post_id = ?;`;
+      const { rows: [party] } = await knex.raw(query, [post_id]);
+      return party ? new Party(party) : null;
+    } catch (err) {
+      console.log(err);
+    }
+  }
+
+  static async list() {
+    try {
+      const { rows } = await knex.raw(`SELECT * FROM parties;`);
+      return rows.map((party) => new Party(party));
+    } catch (err) {
+      console.log(err);
+      return null;
+    }
+  }
+
+  // Update
+  static async update(post_id, coulumn, value) {
+    try {
+      const query = `UPDATE parties SET ${coulumn} = ? WHERE post_id = ${post_id} RETURNING *;`;
+      const { rows: [party] } = await knex.raw(query, [value]);
+      return new Party(party);
+    } catch (err) {
+      console.log(err);
+    }
+  }
+
+  // Delete
+  static async destroy(post_id) {
+    try {
+      const query = 'DELETE FROM parties WHERE post_id = ? RETURNING *;';
+      const { rows } = await knex.raw(query, [post_id]);
+      return rows.map((party) => new Party(party));
+    } catch (err) {
+      console.log(err);
     }
   }
 }

@@ -1,4 +1,4 @@
-const destroy = async(req, res) =>{
+const destroy = async (req, res) => {
   const {
     db: { Party },
     body: { post_id },

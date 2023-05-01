@@ -38,6 +38,7 @@ Router.patch('/users/:id', checkAuthentication, userController.update);
 Router.delete('/users/logout', userController.logout);
 
 // Parties
+
 // Create
 Router.post('/parties', partyController.create);
 
