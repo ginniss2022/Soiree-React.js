@@ -1,10 +1,11 @@
 const express = require('express');
 // eslint-disable-next-line import/no-extraneous-dependencies
-// const upload = require('./middleware/multer');
+const upload = require('./middleware/multer');
 const userController = require('./controllers/user');
 const partyController = require('./controllers/parties/index');
 const addModels = require('./middleware/add-models');
 const checkAuthentication = require('./middleware/check-authentication');
+const app = require('./server');
 
 const Router = express.Router();
 Router.use(addModels);
@@ -50,6 +51,12 @@ Router.patch('/parties/id', partyController.update);
 
 // Delete
 Router.delete('/parties/id', partyController.destroy);
+
+//multer upload
+Router.post("/upload", upload.single('image'), (req, res) => {
+  console.log("reached");
+  
+})
 
 module.exports = Router;
 

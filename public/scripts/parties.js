@@ -6,7 +6,7 @@ postForm.addEventListener('submit', async (event) => {
   const formData = new FormData(postForm);
 
   try {
-    const response = await fetch('/api/parties', {
+    const response = await fetch('/api/upload', {
       method: 'POST',
       body: formData,
     });

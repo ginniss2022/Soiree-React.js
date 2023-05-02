@@ -9,19 +9,8 @@
     <link rel="stylesheet" href="styles/parties.css">
 </head>
 <body>
-    <form id="post-form">
-        <label for="user_id">User ID:</label>
-        <input type="text" id="user_id" name="user_id"><br>
-      
-        <label for="description">Description:</label>
-        <textarea id="description" name="description"></textarea><br>
-      
-        <label for="location">Location:</label>
-        <input type="text" id="location" name="location"><br>
-      
-        <label for="image_file">Image file:</label>
-        <input type="file" id="image_file" name="image_file"><br>
-      
-        <button type="submit">Create Post</button>
-      </form>
+    <form action="/api/upload" method="POST" id="postForm" enctype="multipart/form-data">
+        <input type="file" name="Upload Image" id="">
+        <button type="submit">Upload</button>
+    </form>
 </html>
