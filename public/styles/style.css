@@ -73,6 +73,12 @@ header {
   flex-direction: column;
 }
 
+.buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
 @media (max-width: 768px) {
   .card {
     width: 100%; 
