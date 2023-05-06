@@ -1,0 +1,18 @@
+header {
+    background-color:#6717CD;
+}
+body{
+    background-color:black;
+}
+main{
+    background-image: url(../images/1683390504857.png) ;
+    background-size: cover;
+    background-color: black;
+}
+.pink_text{
+    font-family: "arial";
+    font-style: normal;
+    font-weight: 600;
+    color: #FFFFFF;
+    text-shadow: 4px 4px 4px #EC0DBB;
+}
