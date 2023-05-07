@@ -6,8 +6,6 @@ const partyController = require('./controllers/parties/index');
 const rsvpController = require("./controllers/rsvp");
 const addModels = require('./middleware/add-models');
 const checkAuthentication = require('./middleware/check-authentication');
-const app = require('./server');
-const multer = require('multer');
 
 const Router = express.Router();
 Router.use(addModels);
@@ -54,17 +52,10 @@ Router.patch('/parties/id', partyController.update);
 // Delete
 Router.delete('/parties/id', partyController.destroy);
 
-//multer upload
-
-Router.post("/upload", upload.single('file'), (req, res) => {
-  const filePath = req.file.path;
-  console.log(filePath);
-})
-
-// RSVP methods 
-Router.get('/rsvp', rsvpController.list)
-Router.delete('/rsvp', rsvpController.destroy)
-Router.post('./rsvp', rsvpController.create)
+// RSVP methods
+Router.get('/rsvp', rsvpController.list);
+Router.delete('/rsvp', rsvpController.destroy);
+Router.post('/rsvp', rsvpController.create);
 
 module.exports = Router;
 

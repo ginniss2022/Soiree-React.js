@@ -5,9 +5,13 @@ const createParty = async (req, res) => {
     body: { party_name, userId, post_description, post_location },
     file: { path },
   } = req;
+<<<<<<< HEAD
 
   const image_file_location = path;
 
+=======
+  const image_file_location = path.split("/")[2];
+>>>>>>> 3522eb5776fcdd1ac256c538249741351b3515bc
   const party = await Party.create(
     party_name,
     userId,
