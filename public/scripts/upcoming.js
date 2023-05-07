@@ -7,6 +7,15 @@ cards.forEach((card) => {
   card.appendChild(button);
 });
 
+/* Header Dropdown */
+
+const userButton = document.querySelector('.menu-toggle');
+const dropdown = document.querySelector('.menu-dropdown');
+
+userButton.addEventListener('click', () => {
+  dropdown.classList.toggle('show');
+});
+
 /* Event Listener to Buttons */
 
 const rsvpButtons = document.querySelectorAll('.card-button');

@@ -325,6 +325,17 @@ img {
 .menu-dropdown {
   display: none;
 }
+
 .menu-dropdown.show {
   display: block;
+}
+
+.upcoming_soiree {
+  display: flex;
+  justify-content: center;
+}
+
+.rsvp_soiree {
+  display: flex;
+  justify-content: center;
 }
