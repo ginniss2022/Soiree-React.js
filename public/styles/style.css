@@ -97,7 +97,7 @@ header {
   display: flex;
   flex-wrap: wrap;
   flex: 1;
-  margin-left: 2rem; 
+  margin-left: 2rem;
 }
 
 /* Upcoming.html */
@@ -123,7 +123,7 @@ header {
 .card {
   width: calc((100% - 8rem) / 3);
   margin-right: 2rem;
-  margin-bottom: 2rem; 
+  margin-bottom: 2rem;
   display: flex;
   flex-direction: column;
 }
@@ -148,7 +148,11 @@ header {
   justify-content: space-around;
 }
 
-.edit-modal{
+.create_soiree_modal {
+  cursor: pointer;
+}
+
+.edit-modal {
   position: fixed;
   top: 0;
   left: 0;
@@ -162,7 +166,7 @@ header {
   pointer-events: none;
 }
 
-.edit-modal.show{
+.edit-modal.show {
   pointer-events: auto;
   opacity: 1;
 }
@@ -234,7 +238,7 @@ header {
 
 @media (max-width: 768px) {
   .card {
-    width: 100%; 
+    width: 100%;
     margin-right: 0;
   }
 
@@ -242,4 +246,3 @@ header {
     margin-left: 0;
   }
 }
-
