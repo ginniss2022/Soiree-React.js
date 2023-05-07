@@ -11,8 +11,30 @@
 </head>
 
 <body>
-    <header>
-        <nav id="main-nav"></nav>
+    <header class="desktop-head">
+        <img src="./logo/Soiree-Transparent.png" alt="Soiree Logo">
+    </header>
+    <br>
+    <br>
+    <header class="mobile-head">
+        <div class="navbar">
+            <div class="logo">
+                <img src="./logo/Soiree-Transparent.png" alt="Soiree Logo">
+            </div>
+            <div class="menu-toggle">
+                <p class="fa fa-bars">Hello, Username!</p>
+                <div class="menu-dropdown">
+                    <ul class="menu-choice">
+                        <a href="upcoming.html">Upcoming Soireés</a>
+                        <br>
+                        <a href="rsvp.html">RSVP’d Soireés</a>
+                        <br>
+                        <a href="my_soiree.html">My Soireés</a>
+                        <br>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </header>
     <div class="create_soiree">
         <p>My Soireés</p>
@@ -47,9 +69,9 @@
         <section class="content">
             <div class="card">
                 <img src="https://placehold.it/300x200" alt="Card image">
-                <div class="card-body">
-                    <h3 class="card-title">Card Title</h3>
-                    <p class="card-text">Card details 1</p>
+                <div class="details">
+                    <h3>Card Title</h3>
+                    <p>Card details gooo here</p>
                     <div class="buttons">
                         <button id="edit">Edit</button>
                         <!-- Edit modal -->
@@ -69,11 +91,11 @@
                                 </form>
                             </div>
                         </div>
-                        <button id="delete" class="delete-btn" data-target="delete-modal-1">Delete</button>
+                        <button class=".delete-btn">Delete</button>
                         <!-- Delete modal -->
-                        <div class="delete-modal" id="delete-modal-1">
+                        <div class="delete-modal" id="delete_modal">
                             <div class="delete-modal-content">
-                                <h2 class="delete-modal-title">Are you sure you want to delete this post?</h2>
+                                <h2>Are you sure you want to delete this post?</h2>
                                 <div class="modal-buttons">
                                     <button class="btn btn-yes">Yes</button>
                                     <button id="delete-close" class="btn btn-no">No</button>
@@ -85,9 +107,9 @@
             </div>
             <div class="card">
                 <img src="https://placehold.it/300x200" alt="Card image">
-                <div class="card-body">
-                    <h3 class="card-title">Card Title</h3>
-                    <p class="card-text">Card details 2</p>
+                <div class="details">
+                    <h3>Card Title</h3>
+                    <p>Card details go here</p>
                     <div class="buttons">
                         <button id="edit">Edit</button>
                         <!-- Edit modal -->
@@ -107,11 +129,11 @@
                                 </form>
                             </div>
                         </div>
-                        <button id="delete" class="delete-btn" data-target="delete-modal-1">Delete</button>
+                        <button>Delete</button>
                         <!-- Delete modal -->
-                        <div class="delete-modal" id="delete-modal-2">
+                        <div class="delete-modal" id="delete_modal">
                             <div class="delete-modal-content">
-                                <h2 class="delete-modal-title">Are you sure you want to delete this post?</h2>
+                                <h2>Are you sure you want to delete this post?</h2>
                                 <div class="modal-buttons">
                                     <button class="btn btn-yes">Yes</button>
                                     <button id="delete-close" class="btn btn-no">No</button>
@@ -123,9 +145,9 @@
             </div>
             <div class="card">
                 <img src="https://placehold.it/300x200" alt="Card image">
-                <div class="card-body">
-                    <h3 class="card-title">Card Title</h3>
-                    <p class="card-text">Card details 3</p>
+                <div class="details">
+                    <h3>Card Title</h3>
+                    <p>Card details go here</p>
                     <div class="buttons">
                         <button id="edit">Edit</button>
                         <!-- Edit modal -->
@@ -145,11 +167,125 @@
                                 </form>
                             </div>
                         </div>
-                        <button id="delete" class="delete-btn" data-target="delete-modal-1">Delete</button>
+                        <button>Delete</button>
                         <!-- Delete modal -->
-                        <div class="delete-modal" id="delete-modal-3">
+                        <div class="delete-modal" id="delete_modal">
                             <div class="delete-modal-content">
-                                <h2 class="delete-modal-title">Are you sure you want to delete this post?</h2>
+                                <h2>Are you sure you want to delete this post?</h2>
+                                <div class="modal-buttons">
+                                    <button class="btn btn-yes">Yes</button>
+                                    <button id="delete-close" class="btn btn-no">No</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://placehold.it/300x200" alt="Card image">
+                <div class="details">
+                    <h3>Card Title</h3>
+                    <p>Card details gooo here</p>
+                    <div class="buttons">
+                        <button id="edit">Edit</button>
+                        <!-- Edit modal -->
+                        <div class="edit-modal" id="edit_modal">
+                            <div class="modal_content">
+                                <span id="close">&times;</span>
+                                <form>
+                                    <label for="soiree-name">Soiree Name:</label>
+                                    <input type="text" id="soiree-name" name="soiree-name" required>
+                                    <label for="location">Location:</label>
+                                    <input type="text" id="location" name="location" required>
+                                    <label for="description">Description:</label>
+                                    <textarea id="description" name="description" required></textarea>
+                                    <label for="image">Upload Images:</label>
+                                    <input type="file" id="image" name="image" accept="image/*" multiple>
+                                    <button type="submit">Save Changes</button>
+                                </form>
+                            </div>
+                        </div>
+                        <button class=".delete-btn">Delete</button>
+                        <!-- Delete modal -->
+                        <div class="delete-modal" id="delete_modal">
+                            <div class="delete-modal-content">
+                                <h2>Are you sure you want to delete this post?</h2>
+                                <div class="modal-buttons">
+                                    <button class="btn btn-yes">Yes</button>
+                                    <button id="delete-close" class="btn btn-no">No</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://placehold.it/300x200" alt="Card image">
+                <div class="details">
+                    <h3>Card Title</h3>
+                    <p>Card details gooo here</p>
+                    <div class="buttons">
+                        <button id="edit">Edit</button>
+                        <!-- Edit modal -->
+                        <div class="edit-modal" id="edit_modal">
+                            <div class="modal_content">
+                                <span id="close">&times;</span>
+                                <form>
+                                    <label for="soiree-name">Soiree Name:</label>
+                                    <input type="text" id="soiree-name" name="soiree-name" required>
+                                    <label for="location">Location:</label>
+                                    <input type="text" id="location" name="location" required>
+                                    <label for="description">Description:</label>
+                                    <textarea id="description" name="description" required></textarea>
+                                    <label for="image">Upload Images:</label>
+                                    <input type="file" id="image" name="image" accept="image/*" multiple>
+                                    <button type="submit">Save Changes</button>
+                                </form>
+                            </div>
+                        </div>
+                        <button class=".delete-btn">Delete</button>
+                        <!-- Delete modal -->
+                        <div class="delete-modal" id="delete_modal">
+                            <div class="delete-modal-content">
+                                <h2>Are you sure you want to delete this post?</h2>
+                                <div class="modal-buttons">
+                                    <button class="btn btn-yes">Yes</button>
+                                    <button id="delete-close" class="btn btn-no">No</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://placehold.it/300x200" alt="Card image">
+                <div class="details">
+                    <h3>Card Title</h3>
+                    <p>Card details gooo here</p>
+                    <div class="buttons">
+                        <button id="edit">Edit</button>
+                        <!-- Edit modal -->
+                        <div class="edit-modal" id="edit_modal">
+                            <div class="modal_content">
+                                <span id="close">&times;</span>
+                                <form>
+                                    <label for="soiree-name">Soiree Name:</label>
+                                    <input type="text" id="soiree-name" name="soiree-name" required>
+                                    <label for="location">Location:</label>
+                                    <input type="text" id="location" name="location" required>
+                                    <label for="description">Description:</label>
+                                    <textarea id="description" name="description" required></textarea>
+                                    <label for="image">Upload Images:</label>
+                                    <input type="file" id="image" name="image" accept="image/*" multiple>
+                                    <button type="submit">Save Changes</button>
+                                </form>
+                            </div>
+                        </div>
+                        <button class=".delete-btn">Delete</button>
+                        <!-- Delete modal -->
+                        <div class="delete-modal" id="delete_modal">
+                            <div class="delete-modal-content">
+                                <h2>Are you sure you want to delete this post?</h2>
                                 <div class="modal-buttons">
                                     <button class="btn btn-yes">Yes</button>
                                     <button id="delete-close" class="btn btn-no">No</button>

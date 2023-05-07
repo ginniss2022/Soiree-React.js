@@ -2,6 +2,8 @@ const modal = document.getElementById("modal");
 const openModalBtn = document.getElementById("open-modal");
 const closeModalBtn = document.querySelector(".close");
 
+/* Open Modal */
+
 // Open modal when "create a soiree" text is clicked
 openModalBtn.addEventListener("click", () => {
   modal.style.display = "block";
@@ -18,6 +20,8 @@ window.addEventListener("click", (event) => {
     modal.style.display = "none";
   }
 });
+
+/* Edit Modal */
 
 // Get all edit buttons and edit modals
 const editButtons = document.querySelectorAll('.card button#edit');
@@ -39,30 +43,38 @@ editButtons.forEach((button, index) => {
     });
 });
 
-// Get all delete buttons and delete modals
-const deleteButtons = document.querySelectorAll('.delete-btn');
-const deleteModals = document.querySelectorAll('.delete-modal');
+/* Delete Modal */
 
-// Loop through each delete button
-deleteButtons.forEach((button, index) => {
-  const deleteModal = deleteModals[index];
-  const yesButton = deleteModal.querySelector('.btn-yes');
-  const noButton = deleteModal.querySelector('.btn-no');
+const deleteButtons = document.querySelectorAll('.buttons button:last-of-type');
 
-  // Attach event listener to delete button
+deleteButtons.forEach(button => {
   button.addEventListener('click', () => {
-    deleteModal.classList.add('show');
+    const modal = button.nextElementSibling;
+    modal.style.display = 'block';
+    
+    const yesButton = modal.querySelector('.btn-yes');
+    yesButton.addEventListener('click', () => {
+      button.closest('.card').remove();
+      modal.style.display = 'none';
+    });
+    
+    const noButton = modal.querySelector('.btn-no');
+    noButton.addEventListener('click', () => {
+      modal.style.display = 'none';
+    });
+    
+    const closeButton = modal.querySelector('#delete-close');
+    closeButton.addEventListener('click', () => {
+      modal.style.display = 'none';
+    });
   });
+});
 
-  // Attach event listener to Yes button
-  yesButton.addEventListener('click', () => {
-    const card = button.closest('.card');
-    card.remove();
-    deleteModal.classList.remove('show');
-  });
+/* Header Dropdown */
 
-  // Attach event listener to No button
-  noButton.addEventListener('click', () => {
-    deleteModal.classList.remove('show');
-  });
+const userButton = document.querySelector('.menu-toggle');
+const dropdown = document.querySelector('.menu-dropdown');
+
+userButton.addEventListener('click', () => {
+  dropdown.classList.toggle('show');
 });
