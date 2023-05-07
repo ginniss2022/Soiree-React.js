@@ -40,7 +40,7 @@ Router.delete('/users/logout', userController.logout);
 
 // Parties
 // Create
-Router.post('/parties', partyController.create);
+Router.post('/parties', upload.single('file'), partyController.create);
 
 // Read
 Router.get('/parties', partyController.list);
@@ -52,17 +52,10 @@ Router.patch('/parties/id', partyController.update);
 // Delete
 Router.delete('/parties/id', partyController.destroy);
 
-// multer upload
-
-Router.post("/upload", upload.single('file'), (req, res) => {
-  const filePath = req.file.path;
-  res.send(filePath);
-});
-
 // RSVP methods
 Router.get('/rsvp', rsvpController.list);
 Router.delete('/rsvp', rsvpController.destroy);
-Router.post('./rsvp', rsvpController.create);
+Router.post('/rsvp', rsvpController.create);
 
 module.exports = Router;
 
