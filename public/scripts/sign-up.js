@@ -6,7 +6,7 @@ import {
 
 const main = async () => {
   const user = await fetchLoggedInUser();
-  if (user) return window.location.assign('/user.html');
+  if (user) return window.location.assign('/upcoming.html');
   document.querySelector('#create-form')
     .addEventListener('submit', async (event) => {
       event.preventDefault();

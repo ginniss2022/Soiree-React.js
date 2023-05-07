@@ -28,7 +28,7 @@ const signupAndLoginHandler = async (url, form) => {
     form.reset();
     return alert('Something went wrong');
   }
-  window.location.assign('/user.html');
+  window.location.assign('/upcoming.html');
 };
 
 // READ USER

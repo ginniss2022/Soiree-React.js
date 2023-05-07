@@ -29,40 +29,38 @@ const editModals = document.querySelectorAll('.edit-modal');
 
 // Loop through each edit button
 editButtons.forEach((button, index) => {
-    const editModal = editModals[index];
-    const close = editModal.querySelector('#close');
+  const editModal = editModals[index];
+  const close = editModal.querySelector('#close');
 
-    // Attach event listener to edit button
-    button.addEventListener('click', () => {
-        editModal.classList.add('show');
-    });
+  // Attach event listener to edit button
+  button.addEventListener('click', () => {
+    editModal.classList.add('show');
+  });
 
-    // Attach event listener to close button
-    close.addEventListener('click', () => {
-        editModal.classList.remove('show');
-    });
+  // Attach event listener to close button
+  close.addEventListener('click', () => {
+    editModal.classList.remove('show');
+  });
 });
 
 /* Delete Modal */
 
 const deleteButtons = document.querySelectorAll('.buttons button:last-of-type');
 
-deleteButtons.forEach(button => {
+deleteButtons.forEach((button) => {
   button.addEventListener('click', () => {
+    // eslint-disable-next-line no-shadow
     const modal = button.nextElementSibling;
     modal.style.display = 'block';
-    
     const yesButton = modal.querySelector('.btn-yes');
     yesButton.addEventListener('click', () => {
       button.closest('.card').remove();
       modal.style.display = 'none';
     });
-    
     const noButton = modal.querySelector('.btn-no');
     noButton.addEventListener('click', () => {
       modal.style.display = 'none';
     });
-    
     const closeButton = modal.querySelector('#delete-close');
     closeButton.addEventListener('click', () => {
       modal.style.display = 'none';
