@@ -1,23 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./styles/style.css">
-  <script type="module" src="./scripts/index.js"></script>
-  <title>Auth Example</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style.css">
+    <script type="module" src="./scripts/upcoming.js"></script>
+    <title>Upcoming Soirées</title>
 </head>
+
 <body>
-  <nav id="main-nav"></nav>
-  <main>
-    <h1>Auth Example</h1>
-    <p>If you're logged in, you can see the secret message below:</p>
-    <section id="secret-container">
-      <h2>THE SECRET</h2>
-      <p id="secret-message">???</p>
-    </section>
-    <a href="parties.html">PARTIES</a>
-  </main>
+    <header class="desktop-head">
+        <img src="./logo/Soiree-Transparent.png" alt="Soiree Logo">
+    </header>
+    <br>
+    <header class="mobile-head">
+        <div class="navbar">
+            <div class="logo">
+                <img src="./logo/Soiree-Transparent.png" alt="Soiree Logo">
+            </div>
+            <div class="menu-toggle">
+                <p class="fa fa-bars">Hello, Username!</p>
+                <div class="menu-dropdown">
+                    <ul class="menu-choice">
+                        <a href="index.html">Upcoming Soireés</a>
+                        <br>
+                        <a href="rsvp.html">RSVP’d Soireés</a>
+                        <br>
+                        <a href="my_soiree.html">My Soireés</a>
+                        <br>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="upcoming_soiree">
+        <p>Upcoming Soireés</p>
+    </div>
+    <div class="container">
+        <div class="sidebar">
+            <p>Hello Username!</p>
+            <a href="index.html">Upcoming Soireés</a>
+            <a href="rsvp.html">RSVP’d Soireés</a>
+            <a href="my_soiree.html">My Soireés</a>
+        </div>
+        <section class="content">
+            <div class="card">
+                <img src="https://placehold.it/300x200" alt="Card image">
+                <div class="details">
+                    <h3>Card Title</h3>
+                    <p>Card details go here</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://placehold.it/300x200" alt="Card image">
+                <div class="details">
+                    <h3>Card Title</h3>
+                    <p>Card details go here</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://placehold.it/300x200" alt="Card image">
+                <div class="details">
+                    <h3>Card Title</h3>
+                    <p>Card details go here</p>
+                </div>
+            </div>
+        </section>
+    </div>
 </body>
+
 </html>

@@ -42,7 +42,7 @@ Router.delete('/users/logout', userController.logout);
 
 // Parties
 // Create
-Router.post('/parties', partyController.create);
+Router.post('/parties', upload.single('file'), partyController.create);
 
 // Read
 Router.get('/parties', partyController.list);

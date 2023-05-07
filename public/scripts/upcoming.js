@@ -25,3 +25,28 @@ rsvpButtons.forEach((button) => {
     button.textContent = "RSVP'd!";
   });
 });
+
+fetch('/api/parties')
+    .then(response => response.json())
+    .then(partyData => {
+      // Generate a card for each party
+      const cardContainer = document.getElementById('content');
+      partyData.forEach(party => {
+        const card = document.createElement('div');
+        card.className = 'card';
+        card.innerHTML = `
+          <img src="${party.image_url}" alt="${party.name}">
+          <div class="card-info">
+            <h2>${party.name}</h2>
+            <p>Date: ${party.date}</p>
+            <p>Time: ${party.time}</p>
+            <p>Location: ${party.location}</p>
+            <p>Description: ${party.description}</p>
+          </div>
+        `;
+        cardContainer.appendChild(card);
+      });
+    })
+    .catch(error => {
+      console.error('Error fetching party data:', error);
+    });
