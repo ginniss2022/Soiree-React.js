@@ -4,6 +4,7 @@
 
 body {
   font-family: sans-serif;
+  background: #6866b3;
 }
 
 nav {
@@ -36,6 +37,16 @@ header {
 .create_soiree {
   display: flex;
   justify-content: center;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 48px;
+  text-align: center;
+
+  color: #FFFFFF;
+
+  text-shadow: 4px 4px 4px #CC9D43;
 }
 
 .modal {
@@ -73,13 +84,9 @@ header {
   cursor: pointer;
 }
 
-.create_soiree_modal {
-  display: flex;
-  justify-content: center;
-}
-
 .container {
   display: flex;
+  border: 1px solid #000000;
 }
 
 .desktop-head {
@@ -111,24 +118,51 @@ img {
   display: flex;
   flex-direction: column;
   flex: 0 0 20%;
+  background: #0B0A32;
+  border-right: 1px solid #000000;
+}
+
+.sidebar p {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 48px;
+  text-align: center;
+
+  color: #FFFFFF;
+
+  text-shadow: 4px 4px 4px #CC9D43;
 }
 
 .sidebar a {
   display: block;
   margin-bottom: 4.25rem;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 48px;
+  text-align: center;
+
+  color: #FFFFFF;
+
+  text-shadow: 4px 4px 4px #CC9D43;
 }
 
 .content {
   display: flex;
   flex-wrap: wrap;
   flex: 1;
-  margin-left: 2rem; 
+  align-content: space-around;
+  justify-content: flex-end;
+  background: #010028;
 }
 
 .card {
   width: calc((100% - 8rem) / 3);
   margin-right: 2rem;
-  margin-bottom: 2rem; 
+  margin-bottom: 2rem;
   display: flex;
   flex-direction: column;
 }
@@ -153,7 +187,7 @@ img {
   justify-content: space-around;
 }
 
-.edit-modal{
+.edit-modal {
   position: fixed;
   top: 0;
   left: 0;
@@ -167,7 +201,7 @@ img {
   pointer-events: none;
 }
 
-.edit-modal.show{
+.edit-modal.show {
   pointer-events: auto;
   opacity: 1;
 }
@@ -181,6 +215,7 @@ img {
   z-index: 9999;
   background-color: rgba(0, 0, 0, 0.7);
   display: none;
+  
 }
 
 .delete-modal.show {
@@ -193,7 +228,6 @@ img {
   background-color: #fff;
   padding: 20px;
   border-radius: 5px;
-  max-width: 500px;
   text-align: center;
 }
 
@@ -223,12 +257,21 @@ img {
 }
 
 .modal_content {
-  background-color: white;
+  background-color: #010028;
   padding: 30px 50px;
   border-radius: 5px;
   width: 600px;
   max-width: 100%;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 48px;
+  text-align: center;
+  text-decoration-line: underline;
+  color: #FFFFFF;
+  text-shadow: 4px 4px 4px #11ECC4;
 }
 
 .modal-buttons {
@@ -250,31 +293,31 @@ img {
 
 
   .card {
-    width: 100%; 
+    width: 100%;
     margin-right: 0;
   }
 
   .content {
     margin-left: 0;
   }
-  
-   .navbar {
+
+  .navbar {
     flex-direction: column;
     align-items: flex-start;
     padding: 1rem 0.5rem;
   }
-  
+
   .nav-links {
     display: flex;
     flex-direction: column;
     margin-top: 1rem;
   }
-  
+
   .nav-links ul li {
     margin-right: 0;
     margin-bottom: 0.5rem;
   }
-  
+
   .sidebar {
     display: none;
   }
@@ -333,9 +376,53 @@ img {
 .upcoming_soiree {
   display: flex;
   justify-content: center;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 48px;
+  text-align: center;
+
+  color: #FFFFFF;
+
+  text-shadow: 4px 4px 4px #CC9D43;
 }
 
 .rsvp_soiree {
   display: flex;
   justify-content: center;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 48px;
+  text-align: center;
+
+  color: #FFFFFF;
+
+  text-shadow: 4px 4px 4px #CC9D43;
+}
+
+.create_soiree_modal {
+  display: flex;
+  justify-content: center;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 48px;
+  text-align: center;
+  text-decoration-line: underline;
+  color: #FFFFFF;
+  text-shadow: 4px 4px 4px #11ECC4;
+}
+
+.create_soiree_modal #open-modal {
+  cursor: pointer;
+}
+
+form {
+  display: flex;
+  flex-flow: column;
+  text-align-last: center;
 }

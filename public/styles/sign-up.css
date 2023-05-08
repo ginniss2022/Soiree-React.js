@@ -35,3 +35,7 @@ main{
     text-shadow: 4px 4px 4px #6717CD;
     ;
 }
+
+#create-form{
+    text-align-last: center;
+}

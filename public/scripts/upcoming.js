@@ -26,7 +26,7 @@ rsvpButtons.forEach((button) => {
   });
 });
 
-fetch('/api/parties')
+fetch('http://127.0.0.1:5500/api/parties')
     .then(response => response.json())
     .then(partyData => {
       // Generate a card for each party

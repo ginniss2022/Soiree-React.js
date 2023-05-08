@@ -16,3 +16,17 @@ main{
     color: #FFFFFF;
     text-shadow: 4px 4px 4px #EC0DBB;
 }
+
+.sign-up {
+    font-family: "arial";
+    font-style: normal;
+    font-weight: 600;
+    color: #FFFFFF;
+    text-shadow: 4px 4px 4px #EC0DBB;
+}
+
+.sign-up-href {
+    text-decoration: none;
+    color: #6bb327;
+    text-shadow: 4px 4px 4px #EC0DBB;
+}
